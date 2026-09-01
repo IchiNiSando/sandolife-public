@@ -12,7 +12,12 @@ Installers and public files for Sando products. Source code stays in private rep
 
 Site: https://patreon-batch.vercel.app
 
-Mac builds are unsigned. After open: **System Settings → Privacy & Security → Open Anyway**.
+Mac builds are unsigned. If macOS says the app is **damaged**, run:
+
+```bash
+xattr -cr "/Applications/Patreon Batch.app"
+open "/Applications/Patreon Batch.app"
+```
 
 ### How to get a license
 
