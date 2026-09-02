@@ -12,12 +12,13 @@ Installers and public files for Sando products. Source code stays in private rep
 
 Site: https://patreon-batch.vercel.app
 
-Mac builds are unsigned. Open the DMG and double-click **Install and Open.command** — do not launch the app from the disk image. If macOS still says the app is **damaged**:
+Mac builds are not Apple-notarized. Open the DMG and double-click **Install and Open.command** — do not launch the `.app` from the disk image.
+
+If macOS says **Apple could not verify “Patreon Batch.app” is free of malware**: click **Done**, then System Settings → Privacy & Security → **Open Anyway**. Or:
 
 ```bash
 xattr -cr "/Applications/Patreon Batch.app"
-codesign --force --deep --sign - "/Applications/Patreon Batch.app"
-open "/Applications/Patreon Batch.app"
+"/Applications/Patreon Batch.app/Contents/MacOS/Patreon Batch"
 ```
 
 ### How to get a license
